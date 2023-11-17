@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babson CODE | Community of Developers and Entrepreneurs</title>
+    <style>
+	:root {
+  --color-one: #3498db;
+  --color-two: #006644;
+  --color-three: #ff6644;
+  --color-three-light: #ee5533;
+  --color-four: #66ff33;
+  --text-color-one: #dddddd;
+  --text-color-two: #fff;
+}
+
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+        header { background-color: var(--color-two); color: #fff; display: flex;
+            justify-content: space-between; align-items: center; z-index: 999;
+            padding: 10px 20px; position: fixed; top: 0; width: 100%; height: 30px; }
+
+        #page-title { text-decoration: none; color: var(--text-color-one);  }
+        #page-title div { font-size: 24px; }
+
+        nav { text-align: right; margin-right: 80px; }
+
+        nav a { color: var(--text-color-two); text-decoration: none; margin-left: 20px; }
+
+        main {  background-color: none; margin-top: 26px; height: 100%; }
+
+        .container { display: flex; flex-wrap: wrap; height: calc(100vh - 25px); }
+
+        .left-third {
+            flex: 1;
+            background-color: var(--color-one);
+            color: #fff;
+            transition: transform 0.3s;
+	    position: relative;
+        }
+
+	.full-name { padding: 80px 60px 60px 20px; }
+
+        .full-name p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+	.full-name p span {
+            font-size: 3.3em;
+            display: inline-block;
+            margin-right: 5px; /* Adjust spacing between letters */
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); } }
+
+        .right-two-thirds { flex: 2; position: relative; background-color: #ccc; }
+
+        .image { width: 100%; height: 75vh; background-image: url('test.jpg'); /* Replace with your image URL */
+            background-size: cover; background-position: center; }
+
+.caption {  position: absolute; bottom: 0;
+  height: 25%; left: 0; width: 100%; background-color: var(--color-three);
+  color: #fff; display: flex; justify-content: center; align-items: center; }
+
+.caption p {
+  text-align: center;
+  background-color: var(--color-three-light);
+  padding: 5px 20px;
+  font-size: 1.8em;
+  margin: 0; /* Remove default margin to ensure complete centering */
+}
+
+.testimony { background-color: var(--color-four); width: 100%; height: 40%; position: absolute; bottom: 0; }
+
+.lower-container { width: 100%; height: calc(70vh - 25px); }
+
+.lower-container h2 { color: var(--text-color-two); text-align: center; 
+margin-top: 0px; padding: 2% 0 0 0; font-size: 170%; height: 6%; }
+
+
+
+.intro-container p { color: var(--text-color-two); text-align: center; font-size: 1.4em; padding: 0 50px 0 50px; }
+
+.intro-container img { width: 34vw; margin-left: 33vw; }
+
+.intro-container { background-color: var(--color-two); } 
+
+.events-container { background-color: var(--color-three); display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+.events-content { display: flex; justify-content: space-between; width: 100%; height: 90%; }
+
+.events-right {
+    background-color: red;
+    flex-basis: 65%;
+    height: 100%;
+    z-index: 150;
+    display: flex; /* Change to flex to enable flex properties on child elements */
+    align-items: center; /* Center the child elements vertically */
+    justify-content: space-around; /* Add space between the child elements */
+}
+
+.events-right div {
+    background-color: brown;
+    width: 33%;
+    height: 80%;
+    margin: 0; /* Remove default margins */
+}
+
+.events-right div img {
+    width: 10%;
+    height: 20%;
+}
+.events-left img { width: 60%; height: 60%;  }
+.events-left h3 { background-color: tan; font-size: 140%; }
+.events-left p { background-color: pink; margin: 5% 5% 0 5%; } 
+.events-left { background-color: blue; flex-basis: 35%; height: 100%;  }
+
+
+
+
+
+.people-container {
+    background-color: var(--color-two);
+}
+
+.contain-people-boxs {
+    display: flex;
+    flex-direction: row; /* Stack children vertically */
+    justify-content: space-evenly;
+}
+
+.people-box {
+        display: flex;
+    width: 40vh; /* Adjust the width as needed */
+    height: 45vh; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Add background color for demonstration */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.people-box img {
+    background-color: red;
+    width: 25vh;
+    height: 25vh;
+}
+
+.people-description {
+    text-align: center;
+}
+
+// .people-image
+
+/* Horizontal spacing for the blocks */
+.people-container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projects-container { background-color: var(--color-three); }
+
+.history-container { background-color: var(--color-two); }
+
+.contact-container { background-color: var(--color-three); }
+
+footer { background-color: var(--color-one); width: 100%; height: 60vh;  }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="http://babsoncode.org" id="page-title"><div>Babson CODE</div></a>
+        <nav>
+            <a href="#">Explore</a>
+            <a href="#">Projects</a>
+            <a href="#">People</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+    <div class="container">
+        <div class="left-third">
+            <div class="full-name">
+                <p><span><strong>C</strong></span><span>o</span><span>m</span><span>m</span><span>u</span><span>n</span><span>i</span><span>t</span><span>y</span></p>
+                <p><span><strong>O</strong></span><span>f</span></p>
+                <p><span><strong>D</strong></span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span><span>s</span><span>&nbsp</span><span>a</span><span>n</span><span>d</span></p>
+                <p><span><strong>E</strong></span><span>n</span><span>t</span><span>r</span><span>e</span><span>p</span><span>r</span><span>e</span><span>n</span><span>e</span><span>u</span><span>r</span><span>s</span></p>
+             </div>   
+         <div class="testimony""></div>
+        </div>
+        <div class="right-two-thirds">
+            <div class="image"></div>
+            <div class="caption">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus. Donec eget ullamcorper nisl, id ultrices quam.</p>
+            </div>
+        </div>
+    </div>
+    <div class="intro-container lower-container">
+         <h2>What is CODE?</h2> 
+	 <img src="./kunal.jpg" alt="CODE Common Room">
+	 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus. Donec eget ullamcorper nisl, id ultrices quam. Sed egestas at nunc ac elementum. Nunc ullamcorper elit a dapibus dapibus. Maecenas lobortis urna quis condimentum mollis. Nam leo sem, lobortis ut luctus eu, ultrices fringilla lorem. Proin nulla diam, lacinia sed neque non, posuere ullamcorper justo. Ut vel nunc pulvinar, bibendum eros in, eleifend tortor. Donec sodales nisi at scelerisque lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum congue metus facilisis, euismod eros ac, rutrum ex. Morbi dictum dolor sit amet rutrum hendrerit. Pellentesque facilisis interdum dolor vitae vulputate. Duis eget posuere enim.</p>
+    </div>
+    <div class="events-container lower-container">
+          <h2>Events</h2>
+	       <div class="events-content">
+               <div class="events-left">
+                     <h3>Our next Event!</h3>
+                     <img src="./kunal.jpg">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus.</p>
+               </div>
+               <div class="events-right">
+                     <div>
+                         <h3>Super Fun Event</h3>
+                         <img src="./kunal.jpg">
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus.</p>
+                    </div>
+                    <div>
+                         <h3>Super Fun Event</h3>
+                         <img src="./kunal.jpg">
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus.</p>
+                    </div>
+                    <div>
+                         <h3>See More</h3>
+                         <img src="./kunal.jpg">
+                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat lectus, iaculis at tortor eget, consectetur accumsan tellus.</p>
+                    </div>
+               </div>
+          </div>
+    </div>
+   <div class="people-container lower-container">
+	   <h2>Meet CODE!</h2><br>
+           <div class="contain-people-boxs">
+                <div class="people-box">
+                    <a href="#"><img></a>
+                    <a href="#" class="people-names">PlaceHolder Name</a>
+                    <p class="people-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem nam, quidem dignissimos error natus soluta nulla modi ducimus.</p>
+                </div>
+                <div class="people-box">
+                    <a href="#"><img></a>
+                    <a href="#" class="people-names">PlaceHolder Name</a>
+                    <p class="people-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem nam, quidem dignissimos error natus soluta nulla modi ducimus.</p>
+                </div>
+                <div class="people-box">
+                    <a href="#"><img></a>
+                    <a href="#" class="people-names">PlaceHolder Name</a>
+                    <p class="people-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor exercitationem nam, quidem dignissimos error natus soluta nulla modi ducimus.</p>
+                </div>
+           </div> 
+   </div>
+    <div class="projects-container lower-container">
+        <h2>Projects</h2>
+        <div class="featured-project">
+	    <div>s</div>
+	</div>
+    </div>
+    <div class="history-container lower-container">
+        <h2>History of CODE</h2>  
+    </div>
+    <div class="contact-container lower-container">
+        <h2>Contact us!</h2>
+    </div>
+</main>
+<footer></footer>
+    <script>
+        const letters = document.querySelectorAll('.left-third p span');
+
+        letters.forEach(letter => {
+            letter.addEventListener('mouseover', () => {
+                letter.style.animation = 'bounce 0.5s 10 alternate';
+            });
+
+            letter.addEventListener('animationend', () => {
+                letter.style.animation = '';
+            });
+        });
+    </script>
+</body>
+</html>
